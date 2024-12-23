@@ -32,3 +32,20 @@ docker pull jenkins/jenkins:lts
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
 docker ps
 docker logs jenkins-password
+
+docker coontainer/images:
+print("helloworld")
+
+FROM python:3.11-slim
+WORKDIR /app
+COPY hello.py /app
+CMD ["python", "hello.py"]
+
+rename dockerfile.txt dockerfile
+
+docker build -t python313-tt
+docker run
+docker login
+docker tag id/python313-tt
+docker push id/python313-tt
+docker run puthon313-tt

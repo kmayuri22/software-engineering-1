@@ -59,7 +59,7 @@ docker logs jenkins-password
 docker coontainer/images:
 print("helloworld")
 
-FROM python:3.11-slim
+FROM python:3.13-slim
 WORKDIR /app
 COPY hello.py /app
 CMD ["python", "hello.py"]
@@ -71,4 +71,4 @@ docker run
 docker login
 docker tag id/python313-tt
 docker push id/python313-tt
-docker run puthon313-tt
+docker run python313-tt

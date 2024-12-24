@@ -54,7 +54,7 @@ jenkins:
 docker pull jenkins/jenkins:lts
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
 docker ps
-docker logs jenkins-password
+docker logs jenkins
 
 docker coontainer/images:
 print("helloworld")
@@ -72,3 +72,21 @@ docker login
 docker tag id/python313-tt
 docker push id/python313-tt
 docker run python313-tt
+
+
+push:
+mkdir git
+cd git
+echo "hello" >> file.txt
+git config -l
+git init
+git add file.txt
+git commit -m"initial commit"
+git log
+git remote add test (link)
+git remote add (link name)
+git branch -M main
+git push -u (link name) main
+git push -u (link name) main
+git status
+git pull
